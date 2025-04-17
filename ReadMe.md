@@ -1,0 +1,1 @@
+Hier soll eine kleine Website entstehen, die über AWS Amplify gehostet wird.
