@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-website-aws/browser",
+            "outputPath": "dist/angular-website-aws",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "baseHref": "/",
