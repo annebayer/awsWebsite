@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_first_components",
+  "info": {
+    "displayName": "firstComponent"
+  },
+  "options": {},
+  "attributes": {
+    "Ueberschrift": {
+      "type": "string"
+    },
+    "Bild": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
