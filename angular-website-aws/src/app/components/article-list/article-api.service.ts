@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core'
 import {catchError, map, Observable} from 'rxjs'
 import {ErrorHandlingService} from '../../shared/httperrorhandling/error-handling.service';
 import {Article} from './article.model';
-import {environment} from '../../../enviroments/enviroment';
+import {environment} from '../../../environments/environment';
 
 
 interface ProjektseiteResponse {
