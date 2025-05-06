@@ -1,0 +1,23 @@
+<h1>Hier sind die Artikel aus Webiny</h1>
+
+<div>
+  @if (errorMessage) {
+    <div>
+      {{ errorMessage }}
+    </div>
+  } @else if (articles.length > 0; ) {
+    <ul>
+    @for (article of articles; track article) {
+
+      <li class="article-item">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.description }}</p>
+      </li>
+    }
+    </ul>
+  } @else {
+    <div>
+      Artikel werden geladen...
+    </div>
+  }
+</div>
