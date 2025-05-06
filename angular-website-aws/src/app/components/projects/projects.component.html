@@ -1,0 +1,26 @@
+<div class="body">
+<h1>Hier sind die bisherigen Projekte</h1>
+
+<div>
+  @if (errorMessage) {
+    <div>
+      {{ errorMessage }}
+    </div>
+  } @else if (projects.length > 0; ) {
+    <ul>
+      @for (project of projects; track project) {
+
+        <li class="project-item">
+          <h3 [class.highlighted]="project.aktivesProjekt" >{{ project.title }}</h3>
+        </li>
+      }
+    </ul>
+  } @else {
+    <div>
+      Projekte werden geladen...
+    </div>
+  }
+</div>
+
+  <p class="fixed-footer footer-text">Die roten Projekte sind die aktiven</p>
+</div>

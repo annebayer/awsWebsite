@@ -1,0 +1,25 @@
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlighted {
+  color: red;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: lightgrey;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
