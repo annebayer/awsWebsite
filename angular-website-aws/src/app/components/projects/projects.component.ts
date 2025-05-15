@@ -1,17 +1,22 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {ProjectService} from './project.service';
 import {Project} from './project.model';
+import {RouterLink} from '@angular/router'
+
 
 @Component({
   selector: 'app-projects',
   providers: [],
-  imports: [
-  ],
   templateUrl: './projects.component.html',
+  standalone: true,
+  imports: [
+    RouterLink
+  ],
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
   private projectService = inject(ProjectService)
+
   projects: Project[] = [];
   errorMessage: string = '';
 

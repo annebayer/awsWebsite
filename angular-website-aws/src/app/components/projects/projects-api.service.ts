@@ -20,6 +20,21 @@ const ListenProjekteQuery = `{
         title
         aktivesProjekt
         description
+        slug
+        image
+      }
+  }
+  }
+`;
+
+const ListenProjektQuery = (slug: string) => `{
+    listProjekte (where: {slug: "${slug}"}) {
+      data {
+        title
+        aktivesProjekt
+        description
+        slug
+        image
       }
   }
   }
@@ -44,6 +59,18 @@ export class ProjectsApi {
       .post<ProjectsResponse>(this.API_BASE_PATH, body, { headers })
       .pipe(
         map(response => response.data.listProjekte.data),
+        catchError(this.errorHandlingService.handleError)
+      );
+  }
+
+  public getProject$(slug: string): Observable<Project> {
+    const headers = this.createHeaders();
+    const body = { query: ListenProjektQuery(slug) };
+
+    return this.http
+      .post<ProjectsResponse>(this.API_BASE_PATH, body, { headers })
+      .pipe(
+        map(response => response.data.listProjekte.data[0]),
         catchError(this.errorHandlingService.handleError)
       );
   }

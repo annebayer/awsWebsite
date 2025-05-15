@@ -3,4 +3,5 @@ export interface Project {
   description: string;
   image: string;
   aktivesProjekt: boolean;
+  slug: string;
 }

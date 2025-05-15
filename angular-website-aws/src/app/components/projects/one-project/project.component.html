@@ -1,0 +1,22 @@
+<div class="body">
+  @if(project()){
+<h1>Das Projekte {{project()!.title}}</h1>
+<h2>{{this.projektseite()}}</h2>
+  <div>
+  @if (errorMessage) {
+    <h1>Fehler</h1>
+    <div>
+      {{ errorMessage }}
+    </div>
+  } @else {
+          <h3 >{{ project()!.title }}</h3>
+          <h3 >{{ project()!.description }}</h3>
+    <img src="{{project()!.image}}" sizes="20%"        alt="Projektbild">
+  }
+</div>
+
+  <p class="fixed-footer footer-text">Die roten Projekte sind die aktiven</p>
+  } @else {
+    <h1>Das Projekt wurde nicht gefunden</h1>
+  }
+</div>

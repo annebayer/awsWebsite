@@ -11,4 +11,7 @@ export class ProjectService {
   getProjects$() {
     return this.projectsApi.getProjects$()
   }
+  getProject$(slug:string) {
+    return this.projectsApi.getProject$(slug)
+  }
 }
