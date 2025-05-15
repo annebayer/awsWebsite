@@ -32,7 +32,7 @@ export const routes: Routes = [
     path: 'projekt/:slug',
     component: ProjectComponent,
     data: {
-      renderMode: 'ssr'
+      renderMode: 'csr'
     }
   },
   {
