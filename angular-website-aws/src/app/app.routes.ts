@@ -31,8 +31,8 @@ export const routes: Routes = [
   {
     path: 'projekt/:slug',
     component: ProjectComponent,
-    data: {
-      renderMode: 'csr'
+    data:{
+      prerender: 'dynamic'
     }
   },
   {
